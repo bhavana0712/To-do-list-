@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Completed Tasks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-view="completed">
+  <main class="garden-shell completed-view">
+    <span class="sticker sticker-strawberry" aria-hidden="true">🍓</span>
+    <span class="sticker sticker-leaf" aria-hidden="true">🌿</span>
+    <span class="sticker sticker-heart" aria-hidden="true">♡</span>
+    <span class="sticker sticker-sparkle" aria-hidden="true">✨</span>
+    <span class="sticker sticker-flower" aria-hidden="true">🌸</span>
+
+    <section class="garden-card completed-card" aria-label="Completed tasks list">
+      <div class="card-header">
+        <span class="card-pill">completed tasks</span>
+        <h1 class="card-title">Completed Tasks</h1>
+        <hr class="title-divider" aria-hidden="true">
+      </div>
+
+      <p class="entry-note">Celebrate every task you've finished. Replant them or let them rest.</p>
+      <p class="entry-note" id="completed-summary">You have 0 completed tasks</p>
+
+      <p class="empty-message" id="completed-empty" hidden>No completed tasks yet. Finish one to see it bloom here!</p>
+
+      <ul class="task-list completed-list" id="completed-list" aria-live="polite"></ul>
+
+      <div class="link-grid">
+        <a class="view-link outline" href="garden.html">← Back to active list</a>
+        <a class="view-link secondary" href="index.html">Plant more tasks</a>
+      </div>
+
+      <p class="card-footer">made with matcha & strawberries ♡</p>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>

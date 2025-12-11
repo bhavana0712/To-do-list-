@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To-Do Garden View</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-view="garden">
+  <main class="garden-shell list-view">
+    <span class="sticker sticker-strawberry" aria-hidden="true">🍓</span>
+    <span class="sticker sticker-leaf" aria-hidden="true">🌿</span>
+    <span class="sticker sticker-heart" aria-hidden="true">♡</span>
+    <span class="sticker sticker-sparkle" aria-hidden="true">✨</span>
+    <span class="sticker sticker-flower" aria-hidden="true">🌸</span>
+
+    <div class="celebration" id="celebration" hidden aria-live="polite">
+      <div class="celebration-card">
+        <p class="celebration-text">Yay! Another task completed ✨</p>
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjh0eXN0ZWlzc3Jzcm5ocThhMzZiZHEyb2ZieWZyenU2Zjh1ZXdtMyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Pink confetti celebration" loading="lazy">
+      </div>
+    </div>
+
+    <section class="garden-card list-card" aria-label="Your saved matcha strawberry tasks">
+      <div class="card-header">
+        <span class="card-pill">garden view</span>
+        <h1 class="card-title">To-Do Garden <span aria-hidden="true">✨</span></h1>
+        <hr class="title-divider" aria-hidden="true">
+      </div>
+
+      <div class="card-stats">
+        <p id="task-summary">You have 0 tasks · 0 done</p>
+        <div class="progress" id="progress-active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span id="progress-fill"></span>
+        </div>
+      </div>
+
+      <p class="entry-note">Peek at everything you've planted from the add page.</p>
+
+      <p class="empty-message" id="pending-empty" hidden>Nothing is sprouting yet. Plant something on the main page!</p>
+
+      <ul class="task-list" id="task-list" aria-live="polite"></ul>
+
+      <div class="link-grid">
+        <a class="view-link" href="completed.html">View completed tasks</a>
+        <a class="view-link secondary" href="index.html">← Back to planting</a>
+      </div>
+
+      <p class="card-footer">made with matcha & strawberries ♡</p>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
